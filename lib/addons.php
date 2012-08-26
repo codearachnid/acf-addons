@@ -133,6 +133,20 @@ if( ! class_exists('ACF_Addons_Library')) {
 					'more_link' => 'http://www.advancedcustomfields.com/add-ons/taxonomy-field/',
 					'description' => __('Select one or more taxonomy terms and assign them to the post.','acf-addons'),
 					'author' => 'Omicron7'
+					),
+				'acf-gravity-forms' => array(
+					'ID' => 'acf-gravity-forms',
+					'repo' => 'https://github.com/stormuk/Gravity-Forms-ACF-Field/zipball/master',
+					'version' => '',
+					'folder' => 'stormuk-Gravity-Forms-ACF-Field-fa3a0e9',
+					'force_folder' => false,
+					'file' => 'gravity_forms.php',
+					'init' => 'Gravity_Forms_field',
+					'title' => __('Gravity Forms','acf-addons'),
+					'more_link' => 'https://github.com/stormuk/Gravity-Forms-ACF-Field',
+					'description' => __('Select one or many Gravity Forms. Returns an object or an array of objects.','acf-addons'),
+					'author' => 'Adam Pope',
+					'more_author' => 'http://www.stormconsultancy.co.uk/'
 					)
 				);
 		}

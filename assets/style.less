@@ -10,22 +10,27 @@
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 }
-/* buttons */
-a{
-	&.install,&.uninstall{
-		display: block;
-		width: 16px;
-		height: 16px;
-		float: left;
-		margin-right: 4px;
-		text-indent: -9999px;
-		&:hover{
-			background-position: 0 100%;
-		}
-		&.disabled{
-			opacity: 0.4;
-			background-position: 0 0 !important;
-			cursor: default;
+#the-list {
+	tr{
+		height:45px;
+	}
+	/* buttons */
+	a{
+		&.install,&.uninstall{
+			display: block;
+			width: 16px;
+			height: 16px;
+			float: left;
+			margin-right: 4px;
+			text-indent: -9999px;
+			&:hover{
+				background-position: 0 100%;
+			}
+			&.disabled{
+				opacity: 0.4;
+				background-position: 0 0 !important;
+				cursor: default;
+			}
 		}
 	}
 }

@@ -1,0 +1,33 @@
+/* buttons */
+#actions {
+  width: 50px;
+}
+.notes {
+  display: none;
+  border: 1px solid #CCC;
+  padding: 0 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+/* buttons */
+a.install,
+a.uninstall {
+  display: block;
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin-right: 4px;
+  text-indent: -9999px;
+}
+a.install:hover,
+a.uninstall:hover {
+  background-position: 0 100%;
+}
+a.install.disabled,
+a.uninstall.disabled {
+  opacity: 0.4;
+  background-position: 0 0 !important;
+  cursor: default;
+}

@@ -9,19 +9,19 @@ This plugin does not store any of the addon code within the repo release. Rather
 
 #### Currently the following fields are included in the library:
 
-* Taxonomy Checkboxes Field by [Future Media](http://futuremedia.gr/)
-* PayPal Item by Mike Rodriguez
+* Address by [Omicron7](https://github.com/GCX/acf-address-field)
+* Advanced Number by [Fumito MIZUNO](https://github.com/ounziw/numfield-advanced-custom-fields)
+* Categories by [Nontas Ravazoulas, Cubeweb](https://github.com/cubeweb/acf-addons)
+* Date and Time Picker by [Per Søderlind](http://soderlind.no/archives/2012/03/09/time-picker-field-for-advanced-custom-fields/)
 * Flickr by [Paul Huisman](http://paulhuisman-online.nl/)
 * Google Maps by [Zvonko, Codeforest](http://www.codeforest.net/)
-* User Select by [lewismcarey](http://twitter.com/lewismcarey)
-* Categories by [Nontas Ravazoulas, Cubeweb](https://github.com/cubeweb/acf-addons)
-* Unique Key by [Nontas Ravazoulas, Cubeweb](https://github.com/cubeweb/acf-addons)
-* Address by [Omicron7](https://github.com/GCX/acf-address-field)
-* Taxonomy by [Omicron7](https://github.com/GCX/acf-taxonomy-field)
 * Gravity Forms by [Adam Pope](https://github.com/stormuk/Gravity-Forms-ACF-Field)
-* Date and Time Picker by [Per Søderlind](http://soderlind.no/archives/2012/03/09/time-picker-field-for-advanced-custom-fields/)
-* Advanced Number Field by [Fumito MIZUNO](https://github.com/ounziw/numfield-advanced-custom-fields)
+* PayPal Item by Mike Rodriguez
 * QR Code Generator by [Fumito MIZUNO](https://github.com/ounziw/qrcode_acf)
+* Taxonomy by [Omicron7](https://github.com/GCX/acf-taxonomy-field)
+* Taxonomy Checkboxes Field by [Future Media](http://futuremedia.gr/)
+* Unique Key by [Nontas Ravazoulas, Cubeweb](https://github.com/cubeweb/acf-addons)
+* User Select by [lewismcarey](http://twitter.com/lewismcarey)
 
 Have an addon you would like to be included - let me know by email tim (at) imaginesimplicity.com or message me on Twitter @[codearachnid](http://www.twitter.com/codearachnid).
 

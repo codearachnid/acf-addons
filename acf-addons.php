@@ -130,16 +130,26 @@ if( ! class_exists('ACF_Addons') ) {
 
     public function init_library(){
       $this->library = ACF_Addons_Library::instance()->addons;
-      $active_fields = maybe_unserialize(get_option(self::DOMAIN . '_active'));
+      $active_fields = (array) maybe_unserialize(get_option(self::DOMAIN . '_active'));
       foreach( array_keys($this->library) as $key ) {
-        if( in_array($key, (array) $active_fields) ) {
+        $init_file = $this->base_path . 'field/' . $this->library[$key]['folder'] . '/' . $this->library[$key]['file'];
+        if( in_array($key, (array) $active_fields) && file_exists($init_file)) {
           $this->library[$key]['status'] =  true;
-          // sanity check for ACF
-          if( function_exists( 'register_field' ) ) {
-            $init_file = $this->base_path . 'field/' . $this->library[$key]['folder'] . '/' . $this->library[$key]['file'];
-            register_field($this->library[$key]['init'], $init_file);
+          if( $this->library[$key]['init'] === false ) {
+            include $init_file;
+          } else {
+            // sanity check for ACF
+            if( function_exists( 'register_field' ) ) {
+              register_field($this->library[$key]['init'], $init_file);
+            }            
           }
         } else {
+          // ensure if the folder is deleted that we don't init
+          if( ! file_exists($init_file) && in_array($key, (array) $active_fields) ) {
+            unset( $active_fields[array_search( $key, $active_fields )] );
+            $active_fields = maybe_serialize($active_fields);
+            update_option( self::DOMAIN . '_active', $active_fields );
+          }
           $this->library[$key]['status'] =  false;
         }
       }
@@ -175,7 +185,8 @@ if( ! class_exists('ACF_Addons') ) {
           // lets open this archive up
           WP_Filesystem();
           add_filter('unzip_file_use_ziparchive', create_function('', 'return false;')); 
-          if ( unzip_file( $file, $this->base_path.'field/' ) ) {
+          $force_folder = $this->library[$key]['force_folder'] ? '/' . $this->library[$key]['folder'] . '/' : '/';
+          if ( unzip_file( $file, $this->base_path.'field' . $force_folder ) ) {
             // Now that the zip file has been used, destroy it
             unlink($file);
           }
@@ -185,7 +196,8 @@ if( ! class_exists('ACF_Addons') ) {
         $update_status = true;       
       } else {
         unset( $active_fields[array_search( $key, $active_fields )] );
-        $this->delete_addon_files($field_folder);
+        // add settings to cleanup addon files
+        // $this->delete_addon_files($field_folder);
         $update_status = false;
       }
       

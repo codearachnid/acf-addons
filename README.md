@@ -18,5 +18,7 @@ Currently the following fields are included in the library:
 * Taxonomy by [Omicron7](https://github.com/GCX/acf-taxonomy-field)
 * Gravity Forms by [Adam Pope](https://github.com/stormuk/Gravity-Forms-ACF-Field)
 * Date and Time Picker by [Per Søderlind](http://soderlind.no/archives/2012/03/09/time-picker-field-for-advanced-custom-fields/)
+* Advanced Number Field by [Fumito MIZUNO](https://github.com/ounziw/numfield-advanced-custom-fields)
+* QR Code Generator by [Fumito MIZUNO](https://github.com/ounziw/qrcode_acf)
 
 Have an addon you would like to be included - let me know by email tim (at) imaginesimplicity.com or message me on Twitter @[codearachnid](http://www.twitter.com/codearachnid).

@@ -161,6 +161,34 @@ if( ! class_exists('ACF_Addons_Library')) {
 					'description' => __('Add a Date and Time Picker field type.','acf-addons'),
 					'author' => 'Per Søderlind',
 					'more_author' => 'http://soderlind.no/about-me/'
+					),
+				'acf-advanced-numfield' => array(
+					'ID' => 'acf-advanced-numfield',
+					'repo' => 'https://github.com/ounziw/numfield-advanced-custom-fields/zipball/master',
+					'version' => '',
+					'folder' => 'ounziw-numfield-advanced-custom-fields-c4b2f7d',
+					'force_folder' => false,
+					'file' => 'numfield/numclass.php',
+					'init' => 'Num_field',
+					'title' => __('Advanced Number Field','acf-addons'),
+					'more_link' => 'https://github.com/ounziw/numfield-advanced-custom-fields',
+					'description' => __('Set the minimum, maximum, and the step in addtion to the default value. Also, you can use a slider bar to set the number, if your browser supports html5.','acf-addons'),
+					'author' => 'Fumito MIZUNO',
+					'more_author' => 'http://wp.php-web.net/'
+					),
+				'acf-qrcode' => array(
+					'ID' => 'acf-qrcode',
+					'repo' => 'https://github.com/ounziw/qrcode_acf/zipball/master',
+					'version' => '',
+					'folder' => 'ounziw-qrcode_acf-5f3ece5',
+					'force_folder' => false,
+					'file' => 'qrcode-acf/qrcode_field.php',
+					'init' => 'QRCode_field',
+					'title' => __('QR Code','acf-addons'),
+					'more_link' => 'https://github.com/ounziw/qrcode_acf',
+					'description' => __('This addon creates a QR code, utilizing http://qrserver.com','acf-addons'),
+					'author' => 'Fumito MIZUNO',
+					'more_author' => 'http://wp.php-web.net/'
 					)
 				);
 		}

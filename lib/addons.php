@@ -117,7 +117,7 @@ if( ! class_exists('ACF_Addons_Library')) {
 					'file' => 'address-field.php',
 					'init' => false,
 					'title' => __('Address Field','acf-addons'),
-					'more_link' => 'http://www.advancedcustomfields.com/add-ons/address-field/',
+					'more_link' => 'https://github.com/GCX/acf-address-field',
 					'description' => __('Enter an address by component, change layouts etc.','acf-addons'),
 					'author' => 'Omicron7'
 					),
@@ -130,7 +130,7 @@ if( ! class_exists('ACF_Addons_Library')) {
 					'file' => 'taxonomy-field.php',
 					'init' => false,
 					'title' => __('Taxonomy Field','acf-addons'),
-					'more_link' => 'http://www.advancedcustomfields.com/add-ons/taxonomy-field/',
+					'more_link' => 'https://github.com/GCX/acf-taxonomy-field',
 					'description' => __('Select one or more taxonomy terms and assign them to the post.','acf-addons'),
 					'author' => 'Omicron7'
 					),
@@ -147,6 +147,20 @@ if( ! class_exists('ACF_Addons_Library')) {
 					'description' => __('Select one or many Gravity Forms. Returns an object or an array of objects.','acf-addons'),
 					'author' => 'Adam Pope',
 					'more_author' => 'http://www.stormconsultancy.co.uk/'
+					),
+				'acf-time-picker' => array(
+					'ID' => 'acf-time-picker',
+					'repo' => 'http://soderlind.no/download/acf_time_picker.zip',
+					'version' => '1.2.0',
+					'folder' => 'acf_time_picker',
+					'force_folder' => false,
+					'file' => 'acf_time_picker.php',
+					'init' => 'acf_time_picker',
+					'title' => __('Date and Time Picker','acf-addons'),
+					'more_link' => 'http://soderlind.no/archives/2012/03/09/time-picker-field-for-advanced-custom-fields/',
+					'description' => __('Add a Date and Time Picker field type.','acf-addons'),
+					'author' => 'Per Søderlind',
+					'more_author' => 'http://soderlind.no/about-me/'
 					)
 				);
 		}

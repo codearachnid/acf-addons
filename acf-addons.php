@@ -4,7 +4,7 @@
 Plugin Name: Advanced Custom Fields Addons
 Plugin URI: 
 Description: Extend '<a href="http://www.advancedcustomfields.com">Advanced Custom Fields</a>' with addon integration through your site's admin
-Version: 1.0
+Version: 0.1
 Author: Timothy Wood (@codearachnid)
 Author URI: http://www.codearachnid.com	
 Author Email: tim@imaginesimplicity.com
@@ -69,6 +69,7 @@ if( ! class_exists('ACF_Addons') ) {
 
       add_action('admin_menu', array($this,'admin_menu'), 12);
       add_action('wp_ajax_' . self::DOMAIN, array($this,'ajax_actions'));
+      add_action('init', array($this,'plugin_update'));
     }
 
     function admin_menu(){
@@ -244,6 +245,29 @@ if( ! class_exists('ACF_Addons') ) {
         echo '<div class="error"><p>' . __('Your install of WordPress does not meet the minimum requirements to run this plugin.','acf-addons') . '</p></div>';
     }
 
+    public function plugin_update(){
+      // define('WP_GITHUB_FORCE_UPDATE', true);
+
+      if (is_admin()) { // note the use of is_admin() to double check that this is happening in the admin
+
+        $config = array(
+          'slug' => $this->base_name,
+          'proper_folder_name' => dirname( $this->base_name ),
+          'api_url' => 'https://api.github.com/repos/codearachnid/acf-addons',
+          'raw_url' => 'https://raw.github.com/codearachnid/acf-addons/master',
+          'github_url' => 'https://github.com/codearachnid/acf-addons',
+          'zip_url' => 'https://github.com/codearachnid/acf-addons/zipball/master',
+          'sslverify' => true,
+          'requires' => '3.0',
+          'tested' => '3.3',
+          'readme' => 'readme.txt'
+          );
+
+        new WPGitHubUpdater($config);
+
+      }
+    }
+
     /* Static Singleton Factory Method */
     public static function instance() {
       if ( !isset( self::$instance ) ) {
@@ -264,6 +288,7 @@ if( ! class_exists('ACF_Addons') ) {
    		// $acf = new Acf; 
       if ( apply_filters( 'acf_field_loader_pre_check', class_exists( 'ACF_Addons' ) && ACF_Addons::requirements( $acf->version ) ) ) {
         // Load all supporting files and hook into WordPress
+        include_once 'lib/updater.php';
         include 'lib/addons.php';
         include 'lib/list_table.php';
         add_action('init', array('ACF_Addons', 'instance'), -100, 0);

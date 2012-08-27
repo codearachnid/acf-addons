@@ -26,3 +26,5 @@ This plugin does not store any of the addon code within the repo release. Rather
 Have an addon you would like to be included - let me know by email tim (at) imaginesimplicity.com or message me on Twitter @[codearachnid](http://www.twitter.com/codearachnid).
 
 ### Please note: This library references remote repos, if the source field files are removed or replaced this plugin must be updated with the new source repos. Upon updating you may need to update and refresh your active fields if a repo is failing to activate
+
+~Current Version:1.4~

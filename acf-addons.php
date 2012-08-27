@@ -4,7 +4,7 @@
 Plugin Name: Advanced Custom Fields Addons
 Plugin URI: 
 Description: Extend '<a href="http://www.advancedcustomfields.com">Advanced Custom Fields</a>' with addon integration through your site's admin
-Version: 0.1
+Version: 1.0
 Author: Timothy Wood (@codearachnid)
 Author URI: http://www.codearachnid.com	
 Author Email: tim@imaginesimplicity.com

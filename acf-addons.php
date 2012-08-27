@@ -252,7 +252,7 @@ if( ! class_exists('ACF_Addons') ) {
 
         $config = array(
           'slug' => $this->base_name,
-          'proper_folder_name' => dirname( $this->base_name ),
+          'proper_folder_name' => 'acf-addons',
           'api_url' => 'https://api.github.com/repos/codearachnid/acf-addons',
           'raw_url' => 'https://raw.github.com/codearachnid/acf-addons/master',
           'github_url' => 'https://github.com/codearachnid/acf-addons',

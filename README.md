@@ -1,5 +1,7 @@
 # Advanced Custom Fields Addons
 
+### NOTE THIS REPO IS NO LONGER ACTIVELY MAINTAINED 
+
 * Version: **1.0**
 * Requires: **Advance Custom Fields v. 3.3.9**
 
